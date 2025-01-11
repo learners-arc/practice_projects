@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="head">
+            <h1>My Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="form">
+        <form action="index.html" id="myform">
+            <label for="name">Name:</label>
+            <input type="text" id="name" onkeyup="validateName()" required>
+            <div class="message" id="nameMessage"></div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" onkeyup="validateEmail()" required>
+            <div class="message" id="emailMessage"></div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" onkeyup="validatePassword()" required>
+            <div class="message" id="passwordMessage"></div>
+            <input type="submit" id="submitform">
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
