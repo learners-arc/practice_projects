@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launch of Just Crypto</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <img src="Screenshot 2025-01-03 012457.png" class="logo">
+    </div>
+    <div class="content">
+        <p>Welcome to The Launch of Just Crypto</p>
+        <h1>We're <span>Launching</span> Soon</h1>
+        <div class="launch-time">
+            <div>
+                <p id="Days"> 00</p>
+                <span>Days</span>
+            </div>
+            <div>
+                <p id="Hours"> 00</p>
+                <span>Hours</span>
+            </div>
+            <div>
+                <p id="Mins">00</p>
+                <span>Mins</span>
+            </div>
+            <div>
+                <p id="Secs">00</p>
+                <span>Secs</span>
+            </div>
+
+        </div>
+        <button type="button">Learn More <img src="triangle.png"></button>
+        <img src="rocket.png" class="rocket">
+    </div>
+    <script>
+        var CountDownDate = new Date("Feb 7, 2025 00:00:00").getTime();
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = CountDownDate - now;
+
+            var Days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var Hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var Mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var Secs = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById("Days").innerHTML = Days;
+            document.getElementById("Hours").innerHTML = Hours;
+            document.getElementById("Mins").innerHTML = Mins;
+            document.getElementById("Secs").innerHTML = Secs;
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("Days").innerHTML = 00;
+                document.getElementById("Hours").innerHTML = 00;
+                document.getElementById("Mins").innerHTML = 00;
+                document.getElementById("Secs").innerHTML = 00;
+            }
+        }, 1000);
+    </script>
+
+</body>
+
+</html>
